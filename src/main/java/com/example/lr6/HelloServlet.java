@@ -1,8 +1,6 @@
 package com.example.demo;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,13 +14,6 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
 
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
-        String name = request.getParameter("username");
-        String age = request.getParameter("userage");
-        String gender = request.getParameter("gender");
-        String country = request.getParameter("country");
-        String[] courses = request.getParameterValues("courses");
 
         // Вычисление объемов тел
         String shape = request.getParameter("shape");
